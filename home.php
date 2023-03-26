@@ -1,64 +1,62 @@
 <?php
-include 'slide.php';
+//include 'slide.php';
 
 // Get the 4 most recently added products
-$stmt = $pdo->prepare('SELECT * FROM musics ORDER BY date_added DESC LIMIT 4');
+$stmt = $pdo->prepare('SELECT * FROM therapist');
 $stmt->execute();
 $recently_added_products = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?><?=template_header('Home')?>
 <style type="text/css">
-    main .featured {
+     form {
     display: flex;
-    flex-direction: column;
-    background-image: url("img/bg.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 500px;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+    flex-flow: column;
+    margin: 40px 0;
 }
+form input[type="submit"] {
+    background: #4e5c70;
+    border: 0;
+    color: #FFFFFF;
+    width: 400px;
+    padding: 12px 0;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 200px;
+}
+form input[type="submit"]:hover {
+    background: #434f61;
+}
+
 </style>
    <main style="background-color: #EEE;">
-<div class="featured"
-style="background-size:cover;background-position:center;width: 100%;">
-    <h3 style="color: black;" >Emotinal Funds By Music</h3>
-  <?=slide('Home')?>
+<div class="featured"style="background-size: cover;
+        background-position: center;
+width: 100%">
+
+    <h3  style="margin-top: 520px; color:black;">Emotinal Funds By Therapist</h3>
+
+  <?//slide('Home')?>
 </div>
-<div class="recentlyadded content-wrapper"   style="margin-left: 290px;">
-    <h2>Recently Added Products</h2>
-    <div class="products"style="margin-left: -90px;">
-        <?php foreach ($recently_added_products as $product): ?>
-    <a href="index.php?page=product&id=<?=$product['id']?>" class="product">
-<img src="img/<?=$product['img']?>" width="280" height="400" alt="<?=$product['name']?>">
-            <span class="name"><?=$product['name']?></span>
-            <span class="price">
-                &dollar;<?=$product['price']?>
-                <?php if ($product['rrp'] > 0): ?>
-                <span class="rrp">&dollar;<?=$product['rrp']?></span>
-                <?php endif; ?>
-            </span>
-        </a>
-        <?php endforeach; ?>
-    </div>
-</div>
-<hr width="600px">
+
+<hr width="500px">
+
 <div class="recentlyadded content-wrapper">
-    <h2>Added Products</h2>
-    <div class="products"style="margin-left: -90px;">
+    <h2>Recently Added </h2>
+    <div class="products"style="margin-left: -10px;">
         <?php foreach ($recently_added_products as $product): ?>
         <a href="index.php?page=product&id=<?=$product['id']?>" class="product">
-            <img src="img/<?=$product['img']?>" width="280" height="400" alt="<?=$product['name']?>">
-            <span class="name"><?=$product['name']?></span>
-            <span class="price">
-                &dollar;<?=$product['price']?>
-                <?php if ($product['rrp'] > 0): ?>
-                <span class="rrp">&dollar;<?=$product['rrp']?></span>
-                <?php endif; ?>
-            </span>
+            <img src="img/<?=$product['img']?>" width="300" height="300" alt="<?=$product['name']?>">
+          <h3 style="font-size: 20px;"><?=$product['name']?></h3>
+            <span class="name"><?=$product['desc']?></span>
+            <span class="name"><?=$product['address']?></span> 
         </a>
         <?php endforeach; ?>
     </div>
+
 </div>
+
+            
 
 <?=template_footer()?>

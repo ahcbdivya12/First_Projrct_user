@@ -87,7 +87,17 @@ header .link-icons a span {
 	top: 22px;
 	right: 0;
 }
-
+main .featured {
+	display: flex;
+	flex-direction: column;
+	background-image: url("img/Top-Psychologists-in-India.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 500px;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+}
 main .featured h2 {
 	display: inline-block;
 	margin: 0;

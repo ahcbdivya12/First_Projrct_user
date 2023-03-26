@@ -1,11 +1,11 @@
 <?php
 
 if (!isset($_SESSION)) {
-  session_start();
+	session_start();
 }
 else{
-  session_destroy();
-  session_start();
+	session_destroy();
+	session_start();
 }
 require_once "db.php";
 
@@ -56,7 +56,7 @@ createConfirmationmbox();
 <title></title>
 <link rel="stylesheet" type="text/css" href="sing_in.css">
 <style type="text/css">
-  
+	
 .form-box:before {
   background-image: url("img/reg_bg.jpg");
   width: 100%;
@@ -81,8 +81,8 @@ createConfirmationmbox();
   border: 1px solid gray;
 }
 img{
-  width: 6%;
-  margin-left: 1400px;
+	width: 6%;
+	margin-left: 1400px;
 
 }
 </style>
@@ -90,7 +90,7 @@ img{
 </head>
 <body>
  <a href="javascript:openulr('index.php');">
-  <img src="img/logout-removebg-preview.png" >
+ 	<img src="img/logout-removebg-preview.png" >
  </a>
   <div class="form-box">
     <div class="header-text" >
@@ -99,14 +99,14 @@ img{
 <h3>Please fill all fields in the form</h3>
 <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
 <div class="input-group" >
-  <label>Email</label>
-  <input type="email" name="email" class="form-control" value="" maxlength="30" required="">
-  <span class="text-danger"><?php if (isset($email_error)) echo $email_error; ?></span>
+	<label>Email</label>
+	<input type="email" name="email" class="form-control" value="" maxlength="30" required="">
+	<span class="text-danger"><?php if (isset($email_error)) echo $email_error; ?></span>
 </div>
 <div class="input-group">
-  <label>Password</label>
-  <input type="password" name="password" class="form-control" value="" maxlength="8" required="">
-  <span class="text-danger"><?php if (isset($password_error)) echo $password_error; ?></span>
+	<label>Password</label>
+	<input type="password" name="password" class="form-control" value="" maxlength="8" required="">
+	<span class="text-danger"><?php if (isset($password_error)) echo $password_error; ?></span>
 </div> 
 
 <input type="submit" class = "btn" name="login" value="Login" style=" font-size:23px; font-weight: bold; ">

@@ -51,6 +51,20 @@ echo "Error: " . $sql . "" . mysqli_error($conn);
 mysqli_close($conn);
 }
 ?>
+<?php
+function  createConfirmationmbox(){
+    echo '<script type="text/javascript"> ';
+    echo ' function openulr(newurl) {';
+    echo '  if (confirm("Are you sure you want to logout From webside")) {';
+    echo '    document.location = newurl;';
+    echo '  }';
+    echo '}';
+    echo '</script>';
+}
+?>
+<?php
+createConfirmationmbox();
+?>
 
 <!DOCTYPE html>
 <html lang="en">
