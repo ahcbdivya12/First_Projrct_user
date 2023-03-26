@@ -1,28 +1,6 @@
 <?php
 include 'navigation.php';
 ?>
-<?php
-//MySQLi Procedural
-$conn = mysqli_connect("localhost","root","","registration");
-$name = mysqli_real_escape_string($conn, $_POST['name']);
-$email = mysqli_real_escape_string($conn, $_POST['email']);
-$message = mysqli_real_escape_string($conn, $_POST['message']);
-
-if (!$conn) {
-  die("Connection failed: " . mysqli_connect_error());
-}
-if(mysqli_query($conn, "INSERT INTO contact_us(name,email,message) VALUES('" .$name. "', '" .$email. "','" . $message. "')")) 
-
-if (!preg_match("/^[a-zA-Z ]+$/",$name)) {
-$name_error = "Name must contain only alphabets and space";
-}
-if(!filter_var($email,FILTER_VALIDATE_EMAIL)) {
-$email_error = "Please Enter Valid Email ID";
-}
-if(strlen($message) < 6) {
-$message = "Maximum 6 of characters";
-}
-?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -51,20 +29,19 @@ $message = "Maximum 6 of characters";
               Contact Us
             </h2>
           </div>
-          <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
+          <form action="#">
             <div>
-              <input type="text" name="name" placeholder="Name" />
+              <input type="text" placeholder="Name" />
             </div>
             <div>
-              <input type="email"name="email" placeholder="Email" />
+              <input type="email" placeholder="Email" />
             </div>
             <div>
-              <input type="message"name="message" class="message-box" placeholder="Message" />
+              <input type="text" class="message-box" placeholder="Message" />
             </div>
             <div class="btn-box">
               <button>
                 SEND
-
               </button>
             </div>
           </form>
