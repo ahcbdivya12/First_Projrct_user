@@ -1,4 +1,5 @@
 <?php
+
 function  createConfirmationmbox(){
     echo '<script type="text/javascript"> ';
     echo ' function openulr(newurl) {';
@@ -7,8 +8,11 @@ function  createConfirmationmbox(){
     echo '  }';
     echo '}';
     echo '</script>';
+    
 }
+
 createConfirmationmbox();
+
 function pdo_connect_mysql() {
     // Update the details below with your MySQL details
     $DATABASE_HOST = 'localhost';
@@ -57,20 +61,21 @@ header nav a:hover {
                     <div class="logo"  style="margin-left:-200px;">
             <img src="img\logo.png" >
         </div>
-        
-    <h1 style="margin-left: 90px;"></h1>
+    <h2 style="margin-left: 90px;"></h2>
                 <nav style="margin-left: 150px;font-weight: bold;">
                     <a href="../index.php" style="color : #fff;">Home</a>
-                    <a href="index.php"style="color : #fff;">Books</a>
+                    <a href="../book/index.php"style="color : #fff;">Books</a>
                     <a href="../music/index.php"style="color : #fff;">Musics</a>
                     <a href="../theripist\index.php"style="color : #fff;">Theripist</a>
                     <a href="c.php"style="color : #fff;">Contact Us</a>
                     <a href="about_us.php"style="color : #fff;">About Us</a>
+
                     <a href="sing-up.php"style="color : #fff;">Registration</a>
                     <a href="sing-in.php"style="color : #fff;">Login</a>
                 </nav>
-                <div class="link-icons">
-                <a href="javascript:openulr('index.php');"style="margin-left:40px;">
+                <div class="link-icons" >
+                
+               <a href="javascript:openulr('index.php');"style="margin-left:40px;">
          <i ><img src="img/logout-removebg-preview.png"width="50px"></i>
                     </a>
                 </div>
@@ -86,7 +91,7 @@ echo <<<EOT
         </main>
         <footer>
             <div class="content-wrapper">
-                <p>&copy; $year, Emotinal featcure</p>
+                <p>&copy; $year, Shopping Cart System</p>
             </div>
         </footer>
     </body>

@@ -2,25 +2,35 @@
 include 'slide.php';
 
 // Get the 4 most recently added products
-$stmt = $pdo->prepare('SELECT * FROM products LIMIT 4');
+$stmt = $pdo->prepare('SELECT * FROM musics ORDER BY date_added DESC LIMIT 4');
 $stmt->execute();
 $recently_added_products = $stmt->fetchAll(PDO::FETCH_ASSOC);
-?>
-<?=template_header('Home')?>
+?><?=template_header('Home')?>
+<style type="text/css">
+    main .featured {
+    display: flex;
+    flex-direction: column;
+    background-image: url("img/bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 500px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+</style>
    <main style="background-color: #EEE;">
-<div class="featured"style="background-size: cover;
-        background-position: center;
-width: 100%">
-
-    <h3 style="color: white;">Emotinal Funds By Books</h3>
+<div class="featured"
+style="background-size:cover;background-position:center;width: 100%;">
+    <h3 style="color: black;" >Emotinal Funds By Music</h3>
   <?=slide('Home')?>
 </div>
-<div class="recentlyadded content-wrapper">
+<div class="recentlyadded content-wrapper"   style="margin-left: 290px;">
     <h2>Recently Added Products</h2>
     <div class="products"style="margin-left: -90px;">
         <?php foreach ($recently_added_products as $product): ?>
-        <a href="index.php?page=product&id=<?=$product['id']?>" class="product">
-            <img src="img/<?=$product['img']?>" width="280" height="400" alt="<?=$product['name']?>">
+    <a href="index.php?page=product&id=<?=$product['id']?>" class="product">
+<img src="img/<?=$product['img']?>" width="280" height="400" alt="<?=$product['name']?>">
             <span class="name"><?=$product['name']?></span>
             <span class="price">
                 &dollar;<?=$product['price']?>

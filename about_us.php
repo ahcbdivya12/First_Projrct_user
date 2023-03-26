@@ -1,5 +1,5 @@
 <?php
-include 'navigation.php';
+include 'functions.php';
 ?>
 <!DOCTYPE html>
 <html>
@@ -89,8 +89,7 @@ color: #000;
   </style>
 </head>
 <body>
-  <?=template_h('about_us')?>
-
+<?=template_header('about_us')?>
 <div class="about-section">
   <h1 style="color: #000;">About Us Page</h1>
   <p>Emotional Fund is use to show your emotion.</p>
@@ -100,7 +99,7 @@ color: #000;
 <div class="row">
   <div class="column">
     <div class="card">
-      <img src="images/art.jpg" alt="Jane" style="width:100%">
+      <img src="img/art.jpg" alt="Jane" style="width:100%">
       <div class="container">
         <h2>Jane lio</h2>
         <p class="title">CEO & Founder</p>
@@ -113,7 +112,7 @@ color: #000;
 
   <div class="column">
     <div class="card">
-      <img src="images/ceo.jpg" alt="Mike" style="width:100%">
+      <img src="img/ceo.jpg" alt="Mike" style="width:100%">
       <div class="container">
         <h2>Mike Ross</h2>
         <p class="title">Art Director</p>
@@ -126,7 +125,7 @@ color: #000;
 
   <div class="column">
     <div class="card">
-      <img src="images/font-end.jpg" alt="John" style="width:100%">
+      <img src="img/font-end.jpg" alt="John" style="width:100%">
       <div class="container">
         <h2>John Doe</h2>
         <p class="title">Font-end Devloper</p>

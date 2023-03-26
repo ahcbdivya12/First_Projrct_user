@@ -1,13 +1,5 @@
+<?=template_header('Place Order')?>
 
-<?=template_header('Place Order');?>
-
-<?php
-function buy() {
-echo <<<EOT
-EOT;
-}
-      
-?>
 <style type="text/css">
 	 form {
 	display: flex;
@@ -22,7 +14,7 @@ form input[type="number"] {
 	color: #555555;
 	border-radius: 5px;
 }
-button {
+form input[type="submit"] {
 	background: #4e5c70;
 	border: 0;
 	color: #FFFFFF;
@@ -33,16 +25,15 @@ button {
 	font-weight: bold;
 	border-radius: 5px;
 	cursor: pointer;
-	margin-left: 300px;
-}button:hover {
+}
+form input[type="submit"]:hover {
 	background: #434f61;
 }
 
 </style>
 <div class="placeorder content-wrapper">
     <h1>Your Order Has Been Placed</h1>
-<h2 style="text-align: center;">Select Your payment method</h2>
-<table >
+   <table >
 	<tr>
 		<td>
 		<a href="https://pay.google.com/"><img src="img/gpay.png"
@@ -75,8 +66,7 @@ https://paytm.com/"><img src="img/paytm.png"
         </form>
 		</td>
 	</tr>
-</table>
-    <p>Thank you for ordering with us, we'll contact you by email with your order details.</p>
+</table> <p>Thank you for ordering with us, we'll contact you by email with your order details.</p>
 </div>
-<?=template_footer();?>
 
+<?=template_footer()?>

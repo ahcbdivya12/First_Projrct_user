@@ -1,12 +1,12 @@
 <?php
-include 'navigation.php';
+include 'functions.php';
 ?>
 <!DOCTYPE html>
 <html>
 <head>
 	<link rel="stylesheet" type="text/css" href="bootstrap.css"/>
   <link href="font-awesome.min.css" rel="stylesheet"/>
-    <link href="style.css" rel="stylesheet" />
+    <link href="style_noti.css" rel="stylesheet" />
     <link href="responsive.css" rel="stylesheet" />
     <style type="text/css">
 .logo img{
@@ -19,7 +19,7 @@ include 'navigation.php';
 </style>
 </head>
 <body class="sub_page">
-  <?=template_h('c')?>
+<?=template_header('c')?>
   <section class="contact_section layout_padding">
     <div class="container">
       <div class="row">
@@ -48,7 +48,7 @@ include 'navigation.php';
         </div>
         <div class="col-md-6">
           <div class="img-box">
-            <img src="contact-img.png" alt="">
+            <img src="img/contact-img.png" alt="">
           </div>
         </div>
       </div>

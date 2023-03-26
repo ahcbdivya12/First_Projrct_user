@@ -19,93 +19,75 @@ body {
 h1, h2, h3, h4, h5 {
 	color: #394352;
 }
-
-.logo img{
-  float: left;
-  width: 100px;
-  height: auto;
-  margin-left: 20px;
-  margin-top: -20px;
+.content-wrapper {
+	width: 1050px;
+	margin: 0 auto;
 }
-
 header {
-    border-bottom: 1px solid #EEEEEE;
-    
+	border-bottom: 1px solid #EEEEEE;
 }
 header .content-wrapper {
-    display: flex;
+	display: flex;
 }
 header h1 {
-    display: flex;
-    flex-grow: 1;
-    flex-basis: 0;
-    font-size: 20px;
-    margin: 0;
-    padding: 24px 0;
+	display: flex;
+	flex-grow: 1;
+	flex-basis: 0;
+	font-size: 20px;
+	margin: 0;
+	padding: 24px 0;
 }
 header nav {
-    display: flex;
-    flex-grow: 1;
-    flex-basis: 0;
-    justify-content: center;
-    align-items: center;
-    
+	display: flex;
+	flex-grow: 1;
+	flex-basis: 0;
+	justify-content: center;
+	align-items: center;
 }
 header nav a {
-    text-decoration: none;
-    color: #000;
-    padding: 10px 10px;
-    margin: 0 10px;
+	text-decoration: none;
+	color: #555555;
+	padding: 10px 10px;
+	margin: 0 10px;
+}
+header nav a:hover {
+	border-bottom: 1px solid #aaa;
 }
 header .link-icons {
-    display: flex;
-    flex-grow: 1;
-    flex-basis: 0;
-    justify-content: flex-end;
-    align-items: center;
-    position: relative;
-
+	display: flex;
+	flex-grow: 1;
+	flex-basis: 0;
+	justify-content: flex-end;
+	align-items: center;
+	position: relative;
 }
 header .link-icons a {
-    text-decoration: none;
-    color: #fff;
-    padding: 0 10px;
-
+	text-decoration: none;
+	color: #394352;
+	padding: 0 10px;
 }
 header .link-icons a:hover {
-    color: #4e5c70;
+	color: #4e5c70;
 }
 header .link-icons a i {
-    font-size: 18px;
+	font-size: 18px;
 }
 header .link-icons a span {
-    display: inline-block;
-    text-align: center;
-    background-color: #63748e;
-    border-radius: 50%;
-    color: #FFFFFF;
-    font-size: 12px;
-    line-height: 16px;
-    width: 16px;
-    height: 16px;
-    font-weight: bold;
-    position: absolute;
-    top: 22px;
-    right: 0;
-}
-
-main .featured {
-	display: flex;
-	flex-direction: column;
-	background-image: url("../images/featured-image.jpg");
-	background-repeat: no-repeat;
-	background-size: cover;
-	height: 520px;
-	align-items: center;
-	justify-content: center;
+	display: inline-block;
 	text-align: center;
-
+	background-color: #63748e;
+	border-radius: 50%;
+	color: #FFFFFF;
+	font-size: 12px;
+	line-height: 16px;
+	width: 16px;
+	height: 16px;
+	font-weight: bold;
+	position: absolute;
+	top: 22px;
+	right: 0;
 }
+
 main .featured h2 {
 	display: inline-block;
 	margin: 0;
@@ -131,7 +113,6 @@ main .recentlyadded h2 {
 	text-align: center;
 	width: 100%;
 	border-bottom: 1px solid #EEEEEE;
-
 }
 main .recentlyadded .products, main .products .products-wrapper {
 	display: flex;
@@ -146,7 +127,6 @@ main .recentlyadded .products .product, main .products .products-wrapper .produc
 	text-decoration: none;
 	width: 25%;
 	padding-bottom: 60px;
-
 }
 main .recentlyadded .products .product img, main .products .products-wrapper .product img {
 	transform: scale(1);
@@ -291,7 +271,6 @@ main .cart table .remove:hover {
 }
 main .cart table .price {
 	color: #999999;
- 
 }
 main .cart table a {
 	text-decoration: none;

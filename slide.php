@@ -17,6 +17,7 @@ echo <<<EOT
   background: #EEE;
   user-select: none;
   font-family: sans-serif;
+
 }
 
 
@@ -24,6 +25,7 @@ echo <<<EOT
   position: relative;
   width: 50%;
   height: 82px;
+ 
   margin: auto auto;
   font-family: 'Helvetica Neue', sans-serif;
   perspective: 1400px;
@@ -57,8 +59,10 @@ input[type=radio]:checked {
 
 #slider label,
 #slider label img {
+  align-items: center;
+
   position: absolute;
-  width: 750px;
+  width: 450px;
   height: 220%;
   left: 0;
   top: -90px;
@@ -68,7 +72,6 @@ input[type=radio]:checked {
   border-radius: 3px;
   cursor: pointer;
   display: flex;
-  align-items: center;
   justify-content: center;
   transition: transform 400ms ease;
 }
@@ -131,18 +134,18 @@ input[type=radio]:checked {
   </style>
 </head>
 <body>
-<section id="slider">
-  <input type="radio" name="slider" id="s1" checked>
+<section id="slider" style="margin-left:500px;">
+  <input type="radio" name="slider" id="s1" style="margin-left:-420px;"checked>
   <input type="radio" name="slider" id="s2">
   <input type="radio" name="slider" id="s3">
   <input type="radio" name="slider" id="s4">
   <input type="radio" name="slider" id="s5">
 
-  <label for="s1" id="slide1"><img src="img/The Anatomy of Loneliness How to Find Your Way Back to Connection.jpeg" alt=""></a></label>
-  <label for="s2" id="slide2"><img src="img/The Depression Cure The 6-Step Program to Beat Depression without Drugs.jpeg"alt=""></label>
-  <label for="s3" id="slide3"><img src="img/The Gifts of Imperfection Embrace Who You Are.jpeg" alt=""></label>
-  <label for="s4" id="slide4"><img src="img/Gift of Therapy.jpeg" alt=""></label>
-  <label for="s5" id="slide5"><img src="img/Gift of Therapy.jpeg" alt=""></label>
+  <label for="s1" id="slide1"><img src="img/relexing_image3.jpeg" alt=""></a></label>
+  <label for="s2" id="slide2"><img src="img/relexing_image1.jpg"alt=""></label>
+  <label for="s3" id="slide3"><img src="img/relexing_image2.jpg" alt=""></label>
+  <label for="s4" id="slide4"><img src="img/relexing_image4.jpeg" alt=""></label>
+  <label for="s5" id="slide5"><img src="img/relexing_image3.jpeg" alt=""></label>
 
 </section>
 
